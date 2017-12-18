@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "159331025670",
+    "firebase_url": "https://shareandrelief-fe23a.firebaseio.com",
+    "project_id": "shareandrelief-fe23a",
+    "storage_bucket": "shareandrelief-fe23a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159331025670:android:e7f471a7480e8bce",
+        "android_client_info": {
+          "package_name": "com.queep.shareandrelief"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159331025670-v487fqimc0l9kt33qbcr04tgqk9tdjm4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_Hfo1kmq5_eGCNyUkgY9qT-PxRoStV_w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
