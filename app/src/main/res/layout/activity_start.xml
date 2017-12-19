@@ -16,4 +16,12 @@
         android:textSize="40sp"
         android:text="@string/this_is_startpage"/>
 
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editName"
+        android:layout_centerHorizontal="true"
+        android:text="@string/register" />
+
 </RelativeLayout>

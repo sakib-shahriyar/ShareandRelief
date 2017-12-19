@@ -3,33 +3,34 @@ package com.queep.shareandrelief;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.support.v7.widget.Toolbar;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    public static String str;
-    EditText txtName;
+public class MainActivity extends AppCompatActivity {
+    static String str;
     Intent intent;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button btnAdd =  findViewById(R.id.buttonClick);
-        txtName =  findViewById(R.id.textName);
-        btnAdd.setOnClickListener(this);
-
+        mAuth = FirebaseAuth.getInstance();
     }
 
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.buttonClick:
-                str = txtName.getText().toString();
-                intent = new Intent(MainActivity.this, StartActivity.class);
-                break;
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if(currentUser == null){
+            intent = new Intent(MainActivity.this, StartActivity.class);
+            startActivity(intent);
+            finish();
         }
-        startActivity(intent);
     }
 }
 
