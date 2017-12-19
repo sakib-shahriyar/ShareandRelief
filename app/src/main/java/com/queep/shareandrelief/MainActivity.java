@@ -6,10 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -30,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.buttonClick:
                 str = txtName.getText().toString();
-                intent = new Intent(MainActivity.this, NameActivity.class);
+                intent = new Intent(MainActivity.this, StartActivity.class);
                 break;
         }
         startActivity(intent);

@@ -1,6 +1,5 @@
 package com.queep.shareandrelief;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,14 +10,14 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class NameActivity extends AppCompatActivity implements View.OnClickListener {
+public class StartActivity extends AppCompatActivity implements View.OnClickListener {
     DatabaseReference mDatabase;
     String name;
     Toast t;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_name);
+        setContentView(R.layout.activity_start);
         Button btnYes =  findViewById(R.id.btnYes);
         Button btnNo =  findViewById(R.id.btnNo);
         TextView txt =  findViewById(R.id.editName);
